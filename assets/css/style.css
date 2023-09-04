@@ -1,0 +1,455 @@
+@import url(./font.css);
+@import url(./pre-design.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 8px;
+    background-color: var(--colors-primary);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--colors-darkPrimary);
+}
+
+body{
+    font-size: 15px;
+    font-family: robotoRegular, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+/* ========================                            ======================
+                            HEADER SECTION START
+========================                            ====================== */
+
+
+
+
+
+#main_Header {
+    position: relative;
+    background: var(--colors-none);
+    padding-top: 10px;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.logo a{
+    display: block;
+}
+
+.primary_Menu {
+    display: flex;
+    flex: 3;
+    margin: 0px;
+    margin-left: 50px;
+}
+
+
+.primary_Menu > li {
+    position: relative;
+    list-style: none;
+}
+
+
+ul.primary_Menu > li > a {
+    display: block;
+    padding: 20px 15px;
+    text-decoration: none;
+    color: var(--colors-light);
+}
+
+ul.primary_Menu > li a i {
+    font-size: 12px;
+    padding: 0px 5px;
+}
+
+.sub_Menu {
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    padding: 15px 0px 10px 5px !important;
+    background-color: var(--colors-darkBlue);
+    box-shadow: var(--boxShadow);
+    border-top: 1px solid var(--colors-primary);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transform-origin: bottom;
+    z-index: 999;
+    transition: all .4s ease-out;
+}
+
+:is(.primary_Menu > li:first-child:hover,
+    .primary_Menu > li:nth-child(3):hover,
+    .primary_Menu > li:nth-child(4):hover
+    ) .sub_Menu{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+}
+
+
+.sub_Menu li {
+    list-style: none;
+}
+
+.sub_Menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--colors-light);
+    transition: all .3s ease;
+}
+.sub_Menu li a:hover {
+    color: var(--colors-primary);
+    padding: 10px 30px;
+}
+
+.action {
+    display: flex;
+    flex: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.login a {
+    text-decoration: none;
+    margin-right: 25px;
+    color: var(--colors-light);
+}
+
+.login a i {
+    margin-right: 5px;
+}
+
+
+
+
+/* ========================                            ======================
+                            HERO SECTION START
+========================                            ====================== */
+
+
+
+
+
+section#hero {
+    background: url(../images/hero-bg.jpg) no-repeat center / cover;
+    padding-top: 75px;
+    margin-top: -75px;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.selector h1 span, .selector h1 p {
+    color: var(--colors-light);
+}
+
+.selector h1 > span:first-child{
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+}
+.selector h1 > span:first-child span {
+    color: var(--colors-primary);
+}
+
+.selector h1 span:nth-child(2) b {
+    padding: 15px 0px;
+    font-weight: 400;
+}
+
+.ah-headline.clip .ah-words-wrapper::after{
+    top: 25% !important;
+    height: 60% !important;
+    background: var(--colors-primary) !important;
+}
+
+.selector h1 p {
+    font-size: 17px;
+    padding-right: 75px;
+    padding-top: 20px;
+    text-align: justify;
+    color: var(--colors-offLight);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 85%;
+}
+
+
+
+
+
+/* ========================                            ======================
+                            ABOUT ME SECTION START
+========================                            ====================== */
+
+
+
+
+
+#about{
+    background: url(../images/bg-about.png) no-repeat center / cover;
+}
+
+.skillImage {
+    flex: 1;
+}
+
+.skillImage img {
+    width: 75%;
+    background-color: #2662fa6b;
+}
+
+.skill_content {
+    flex: 1;
+    padding: 20px;
+}
+
+.title{
+    padding-bottom: 15px;
+}
+
+.title span {
+    color: var(--colors-lightBlue);
+    font-size: 18px;
+    font-family: robotoMedium;
+}
+
+.title h1 {
+    color: #04091e;
+    font-family: robotoBold;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.title p {
+    margin: 0;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+.skills {
+    padding-top: 10px;
+}
+
+.skillBar {
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.skillBar p {
+    color: #000;
+    font-family: robotoMedium;
+    margin: 0;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background: #818181;
+}
+
+.percentage-1 {
+    height: 100%;
+    width: 95%;
+    background: var(--colors-lightBlue);
+    position:relative
+}
+
+
+.percentage-2 {
+    height: 100%;
+    width: 90%;
+    background: var(--colors-lightBlue);
+    position:relative
+}
+
+
+.percentage-3 {
+    height: 100%;
+    width: 84%;
+    background: var(--colors-lightBlue);
+    position:relative
+}
+
+
+.percentage-4 {
+    height: 100%;
+    width: 87%;
+    background: var(--colors-lightBlue);
+    position:relative
+}
+
+.percentage:after {
+    content: attr(data-perc);
+    position: absolute;
+    top: -200%;
+    right: 0%;
+    width: 25px;
+    height: 25px;
+    background: var(--colors-lightBlue);
+    color: #fff;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    box-shadow: -2px 0px 2px 1px #3e3e3e7a;
+}
+
+
+
+
+
+
+/* ========================                            ======================
+                            SERVICES SECTION START
+========================                            ====================== */
+
+
+
+
+
+#services{
+    background-color: #eaf8f3;
+}
+
+.row {
+    padding: 50px 0px;
+}
+
+.serviceBoxes {
+    padding: 40px 5px 15px;
+}
+
+.wrap_serviceBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.serviceBox {
+    width: 365px;
+    background-color: var(--colors-light);
+    padding: 15px;
+    border: 1px solid #efefef;
+    margin-bottom: 50px;
+    transition: all 0.3s ease;
+}
+.serviceBox:first-child:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #b4c9ff;
+}
+.serviceBox:nth-child(2):hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #ffa0c5;
+}
+.serviceBox:nth-child(3):hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #8dffc6;
+}
+.serviceBox:nth-child(4):hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #d3b8ff;
+}
+.serviceBox:nth-child(5):hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #9cf1ff;
+}
+.serviceBox:last-child:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #ffdf98;
+}
+
+.serviceIcon {
+    width: 100px;
+    padding: 25px 0px;
+    border-radius: 100%;
+    margin: 10px auto;
+}
+.service-ui{
+    background-color: #fffae5;
+}
+.service-ux{
+    background-color: #efe6fe;
+}
+.service-pd{
+    background-color: #ecfbf4;
+}
+.service-gd{
+    background-color: #fef1e7;
+}
+.service-seo{
+    background-color: #d8f9ff;
+}
+.service-dm{
+    background-color: #fffae5;
+}
+
+.serviceIcon img {
+    width: 50%;
+}
+
+.serviceInfo {
+    padding: 10px 0px;
+}
+
+.serviceInfo h1 {
+    font-family: robotoBold;
+    font-size: 25px;
+}
+
+
+
+
+/* =======================     FOOTER PART     ===================== */
+
+
+
+footer {
+    background: #051026;
+}
+
+footer h2 {
+    margin: 0;
+    color: var(--colors-light);
+    font-size: 18px;
+    padding: 10px;
+}

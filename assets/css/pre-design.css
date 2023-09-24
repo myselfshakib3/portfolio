@@ -45,6 +45,7 @@
     background-color: var(--colors-primary);
     border: 2px solid var(--colors-primary);
     padding: 10px 25px;
+    text-align: center;
     transition: all 0.3s;
 }
 .btn-primary:hover{

@@ -53,6 +53,21 @@ nav{
     align-items: center;
 }
 
+.logo {
+    flex: 1;
+}
+
+.mobile_menu {
+    display: none;
+}
+
+.menu_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 5;
+}
+
 .logo a{
     display: block;
 }
@@ -61,7 +76,6 @@ nav{
     display: flex;
     flex: 3;
     margin: 0px;
-    margin-left: 50px;
 }
 
 
@@ -204,11 +218,13 @@ section#hero {
 
 .hero-image {
     flex: 1;
-    text-align: center;
+    text-align: right;
 }
 
 .hero-image img {
     width: 85%;
+    margin-bottom: -50px;
+    transform: scaleX(-1);
 }
 
 
